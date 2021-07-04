@@ -170,4 +170,6 @@ TODO
 
 ## Weiterführende Literatur
 
-1. TODO
+1. Steven F. Lott. _Functional Python Programming, 2nd Edition_. Packt Publishing, 2018.
+2. Pierre-Yves Saumont. _Functional Programming in Java_. Manning Publications, 2017.
+3. Venkat Subramaniam. _Functional Programming in Java_. Pragmatic Bookshelf, 2014.
