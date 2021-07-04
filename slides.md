@@ -36,7 +36,7 @@ lang: haskell
 ### Ausgabe
 
 ```terminal2
-runhaskell code/hello.hs
+./pause-and-run code/hello.hs
 ```
 
 ---
@@ -53,7 +53,7 @@ lang: python
 ### Ausgabe
 
 ```terminal2
-python code/hello.py
+./pause-and-run code/hello.py
 ```
 
 ---
@@ -70,7 +70,7 @@ lang: java
 ### Ausgabe
 
 ```terminal2
-java code/hello.java
+./pause-and-run code/hello.java
 ```
 
 ---

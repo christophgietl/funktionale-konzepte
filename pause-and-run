@@ -1,0 +1,26 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+run_file() {
+  if [[ $1 == *.hs ]]; then
+    runhaskell "$1"
+  elif [[ $1 == *.java ]]; then
+    java "$1"
+  elif [[ $1 == *.py ]]; then
+    python "$1"
+  else
+    echo 1>&2 "Cannot open $1: Unknown file format."
+    exit 1
+  fi
+}
+
+wait_for_keypress() {
+  # inspired by
+  # http://bitthinker.com/blog/en/develop/how-to-press-any-key-to-continue-in-bash
+  read -n 1 -r -s -p "Press e to execute code ..."
+  clear
+}
+
+wait_for_keypress
+run_file "$1"
