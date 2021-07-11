@@ -11,26 +11,34 @@
 
 ---
 
-# Agenda
-
-1. Funktionale Programmierung vs. imperative Programmierung
-2. Funktionale Konzepte
-    1. Unveränderliche Daten _(immutable data)_
-    2. Reine Funktionen _(pure functions)_
-    3. Funktionen als Bürger:innen erster Klasse _(functions as first-class citizens)_
-    4. Funktionen höherer Ordnung _(higher-order functions)_
-    5. Rekursion _(recursion)_
-    6. Listenverarbeitung _(list processing)_
-    7. Bedarfsauswertung _(lazy evaluation)_
-3. Zusammenfassung und Ausblick
-
-# Folien & Code
+# Folien und Code
 
 https://github.com/christophgietl/funktionale-konzepte
 
+# Agenda
+
+1. Funktionale Programmierung als Paradigma
+2. Funktionale Konzepte in Haskell
+    1. Unveränderliche Daten
+    2. Rekursion
+    3. Reine Funktionen
+    4. Funktionen als Bürger:innen erster Klasse
+    5. Funktionen höherer Ordnung
+    6. Listenverarbeitung
+    7. Bedarfsauswertung
+3. Funktionale Konzepte in Python
+    1. Unveränderliche Daten
+    2. Rekursion
+    3. Reine Funktionen
+    4. Funktionen als Bürger:innen erster Klasse
+    5. Funktionen höherer Ordnung
+    6. Listenverarbeitung
+    7. Bedarfsauswertung
+4. Zusammenfassung
+
 ---
 
-# Funktionale Programmierung vs. imperative Programmierung
+# Funktionale Programmierung als Paradigma
 
 - Java & Python als imperative Sprachen
 - Haskell als rein funktionale Sprache
@@ -137,18 +145,18 @@ lang: python
 
 ## Reine Funktionen _(pure functions)_
 
-Reine Funktionen in der funktionalen Programmierung verhalten sich
-wie Funktionen in der Mathematik (z. B. f(x,y)=2x-3y+2):
-1. **Der Ausgabewert hängt nur von den Eingabewerten ab:**
-   Der Ausgabewert von f(4,1) ist stets 7,
-   unabhängig von sonstigen veränderlichen Variablen,
-   Zuständen oder Zufallsereignissen.
-2. **Es treten keine Seiteneffekte auf:**
-   1. Der Aufruf von f(x,y) verändert nicht die Eingabewerte x und y.
-   2. Der Aufruf von f(x,y) verändert keine sonstigen Variablen (z. B. a, D oder foo).
-   3. Der Aufruf von f(x,y) löst keine Ein- oder Ausgabeoperationen aus:
-      1. keine Ein- oder Ausgaben im Nutzerinterface (z. B. Tastatur oder Monitor)
-      2. keine Lese- oder Schreiboperationen im Permanentspeicher (z. B. Festplatte)
+Reine Funktionen in der funktionalen Programmierung verhalten sich wie Funktionen in der Mathematik
+(bspw. f(x,y)=2x-3y+2):
+
+1. *Der Ausgabewert hängt nur von den Eingabewerten ab:*
+    1. Der Ausgabewert von f(4,1) ist stets 7.
+    2. Dies gilt unabhängig von sonstigen veränderlichen Variablen, Zuständen oder Zufallsereignissen.
+2. *Es treten keine Seiteneffekte auf:*
+    1. Der Aufruf von f(x,y) verändert nicht die Eingabewerte x und y.
+    2. Der Aufruf von f(x,y) verändert keine sonstigen Variablen (bspw. a, D oder foo).
+    3. Der Aufruf von f(x,y) löst keine Ein- oder Ausgabeoperationen aus:
+        1. keine Ein- oder Ausgaben im Nutzerinterface (bspw. Tastatur oder Monitor)
+        2. keine Lese- oder Schreiboperationen im Permanentspeicher (bspw. Festplatte)
 
 ---
 
@@ -222,11 +230,12 @@ lang: python
 ## Funktionen als Bürger:innen erster Klasse _(functions as first-class citizens)_
 
 Die »Bürger:innen erster Klasse einer Programmiersprache« können
+
 - einer Variablen als Wert zugewiesen werden,
 - einer Funktion als Eingabewert übergeben werden und
 - von einer Funktion als Ausgabewert zurückgegeben werden.
 
-Daten (z. B. Zahlen und Zeichenwerte) sind in vielen Programmiersprachen Bürger:innen erster Klasse.
+Daten (bspw. Zahlen und Zeichenwerte) sind in vielen Programmiersprachen Bürger:innen erster Klasse.
 
 In der funktionalen Programmierung sind auch Funktionen Bürger:innen erster Klasse.
 
@@ -313,6 +322,7 @@ lang: python
 ## Funktionen höherer Ordnung _(higher-order functions)_
 
 Funktionen höherer Ordnung
+
 * nehmen Funktionen als Eingabewerte entgegen oder
 * geben Funktionen als Ausgabewerte zurück.
 
@@ -417,14 +427,29 @@ lang: python
 
 ---
 
-# Zusammenfassung und Ausblick
+# Zusammenfassung
 
-## Zusammenfassung
+1. Funktionale Programmierung unterscheidet sich durch das Fehlen von Zustand grundlegend von imperativer
+   Programmierung.
+2. Haskell und andere rein funktionale Programmiersprachen *zwingen* den:die Programmierer:in zur Nutzung funktionaler
+   Konzepte.
+3. Python und andere Multiparadigmensprachen *erlauben* die Nutzung funktionaler Konzepte.
+4. Funktionale Konzepte
+    1. machen Software modular und kombinierbar und
+    2. erleichtern das Debugging, das Testen und den Beweis der Korrektheit.
 
-TODO
+# Literatur
 
-## Weiterführende Literatur
+## Bücher
 
 1. Steven F. Lott. _Functional Python Programming, 2nd Edition_. Packt Publishing, 2018.
 2. Pierre-Yves Saumont. _Functional Programming in Java_. Manning Publications, 2017.
 3. Venkat Subramaniam. _Functional Programming in Java_. Pragmatic Bookshelf, 2014.
+
+## World Wide Web
+
+1. Paul Hudak, John Peterson, Joseph Fasel. »A gentle introdcution to Haskell. Version
+   98.« https://www.haskell.org/tutorial/index.html
+2. A. M. Kuchling. »Functional Programming HOWTO. Release 0.32.« https://docs.python.org/3/howto/functional.html
+3. Rainer Grimm. Kategorie »funktional« im Blog »Modernes
+   C++«. https://www.grimm-jaud.de/index.php/blog/category/funktional
