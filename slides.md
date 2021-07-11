@@ -391,17 +391,28 @@ lang: haskell
 
 ## Bedarfsauswertung _(lazy evaluation)_
 
----
-
-### Java
+### Haskell
 
 ```file
-path: code/hello.java
-lang: java
+path: code/lazy_evaluation.hs
+lang: haskell
 ```
 
-```terminal2
-./pause-and-run code/hello.java
+```terminal3
+./pause-and-run code/lazy_evaluation.hs
+```
+
+---
+
+### Python
+
+```file
+path: code/lazy_evaluation.py
+lang: python
+```
+
+```terminal3
+./pause-and-run code/lazy_evaluation.py
 ```
 
 ---
