@@ -22,18 +22,16 @@ https://github.com/christophgietl/funktionale-konzepte
     1. Unveränderliche Daten
     2. Rekursion
     3. Reine Funktionen
-    4. Funktionen als Bürger:innen erster Klasse
-    5. Funktionen höherer Ordnung
-    6. Listenverarbeitung
-    7. Bedarfsauswertung
+    4. Funktionen als Bürger:innen erster Klasse und Funktionen höherer Ordnung
+    5. Listenverarbeitung
+    6. Bedarfsauswertung
 3. Funktionale Konzepte in Python
     1. Unveränderliche Daten
     2. Rekursion
     3. Reine Funktionen
-    4. Funktionen als Bürger:innen erster Klasse
-    5. Funktionen höherer Ordnung
-    6. Listenverarbeitung
-    7. Bedarfsauswertung
+    4. Funktionen als Bürger:innen erster Klasse und Funktionen höherer Ordnung
+    5. Listenverarbeitung
+    6. Bedarfsauswertung
 4. Zusammenfassung
 
 ---
@@ -45,13 +43,9 @@ https://github.com/christophgietl/funktionale-konzepte
 
 ---
 
-# Funktionale Konzepte
+# Funktionale Konzepte in Haskell
 
 ## Unveränderliche Daten _(immutable data)_
-
-### Haskell
-
-#### Variablen sind unveränderlich:
 
 ```file
 path: code/immutable_data.hs
@@ -64,9 +58,144 @@ lang: haskell
 
 ---
 
-### Python
+## Rekursion _(recursion)_
 
-#### Variablen sind veränderlich:
+Variablen dürfen in rein funktionalen Sprachen ihren Wert nicht ändern.
+
+Daher gibt es *keine Schleifen* (wie bspw. `for i in range(10)` oder `while i<10`).
+
+Haskell und andere rein funktionale Sprachen nutzen stattdessen Rekursion:
+
+```file
+path: code/recursion.hs
+lang: haskell
+```
+
+```terminal2
+./pause-and-run code/recursion.hs
+```
+
+---
+
+## Reine Funktionen _(pure functions)_
+
+Reine Funktionen verhalten sich wie Funktionen in der Mathematik
+(bspw. f(x,y)=2x-3y+2):
+
+1. *Der Ausgabewert hängt nur von den Eingabewerten ab:*
+    1. Der Ausgabewert von f(4,1) ist stets 7.
+    2. Dies gilt unabhängig von sonstigen veränderlichen Variablen, Zuständen oder Zufallsereignissen.
+2. *Es treten keine Seiteneffekte auf:*
+    1. Der Aufruf von f(x,y) verändert nicht die Eingabewerte x und y.
+    2. Der Aufruf von f(x,y) verändert keine sonstigen Variablen (bspw. a, D oder foo).
+    3. Der Aufruf von f(x,y) löst keine Ein- oder Ausgabeoperationen aus:
+        1. keine Ein- oder Ausgaben im Nutzerinterface (bspw. Tastatur oder Monitor)
+        2. keine Lese- oder Schreibvorgänge im Permanentspeicher (bspw. Festplatte)
+
+Rein funktionale Sprachen erlauben keine unreinen Funktionen.
+
+Für Ein- und Ausgabeoperationen verwendet Haskell stattdessen sogenannte Monaden (bspw. `putStrLn`).
+
+---
+
+```file
+path: code/pure_functions.hs
+lang: haskell
+```
+
+```terminal6
+./pause-and-run code/pure_functions.hs
+```
+
+---
+
+## Funktionen als Bürger:innen erster Klasse und Funktionen höherer Ordnung _(functions as first-class citizens and higher-order functions)_
+
+Daten (wie bspw. Zahlen und Zeichenwerte) sind in vielen Programmiersprachen *Bürger:innen erster Klasse*.
+Das heißt, sie können
+- einer Variablen als Wert zugewiesen werden,
+- einer Funktion als Eingabewert übergeben werden und
+- von einer Funktion als Ausgabewert zurückgegeben werden.
+
+
+In der funktionalen Programmierung sind auch Funktionen Bürger:innen erster Klasse.
+
+Funktionen, die Funktionen als Eingabewerte entgegennehmen oder als Ausgabewerte zurückgeben, heißen *Funktionen höherer Ordnung*.
+
+### Zuweisung von Werten
+
+```file
+path: code/first_class_citizens_assignment.hs
+lang: haskell
+```
+
+```terminal2
+./pause-and-run code/first_class_citizens_assignment.hs
+```
+
+---
+
+### Übergabe einer Funktion als Eingabewert
+
+```file
+path: code/first_class_citizens_input.hs
+lang: haskell
+```
+
+```terminal2
+./pause-and-run code/first_class_citizens_input.hs
+```
+
+### Rückgabe einer Funktion als Ausgabewert
+
+```file
+path: code/first_class_citizens_output.hs
+lang: haskell
+```
+
+```terminal3
+./pause-and-run code/first_class_citizens_output.hs
+```
+
+---
+
+## Listenverarbeitung _(list processing)_
+
+```file
+path: code/list_processing.hs
+lang: haskell
+```
+
+```terminal2
+./pause-and-run code/list_processing.hs
+```
+
+TODO: map
+
+TODO: filter
+
+TODO: reduce
+
+---
+
+## Bedarfsauswertung _(lazy evaluation)_
+
+```file
+path: code/lazy_evaluation.hs
+lang: haskell
+```
+
+```terminal3
+./pause-and-run code/lazy_evaluation.hs
+```
+
+---
+
+# Funktionale Konzepte in Python
+
+## Unveränderliche Daten _(immutable data)_
+
+### Veränderlichkeit von Variablen
 
 ```file
 path: code/immutable_data_variables.py
@@ -77,7 +206,7 @@ lang: python
 ./pause-and-run code/immutable_data_variables.py
 ```
 
-#### Konvention: Variablennamen in Großbuchstaben bezeichnen Konstanten (d. h. unveränderliche Variablen):
+### Konvention: Variablennamen in Großbuchstaben bezeichnen Konstanten (d. h. unveränderliche Variablen).
 
 ```file
 path: code/immutable_data_constants.py
@@ -90,7 +219,7 @@ lang: python
 
 ---
 
-#### Tupel sind unveränderlich:
+### Unveränderlichkeit von Tupeln
 
 ```file
 path: code/immutable_data_tuples.py
@@ -103,7 +232,7 @@ lang: python
 
 ---
 
-#### Einschränkung: Wir können den Wert der Variablen `a` durch einen neuen Tupel ersetzen:
+### Einschränkung: Wir können den Wert der Variablen `a` durch einen neuen Tupel ersetzen.
 
 ```file
 path: code/immutable_data_replace_tuple.py
@@ -114,7 +243,7 @@ lang: python
 ./pause-and-run code/immutable_data_replace_tuple.py
 ```
 
-#### Besser: Verwende den veränderlichen Typ `list`:
+### Besser: Verwende den veränderlichen Typ `list`.
 
 ```file
 path: code/immutable_data_use_mutable_type.py
@@ -127,7 +256,7 @@ lang: python
 
 ---
 
-#### Einige veränderliche und unveränderliche Typen in Python:
+### Einige veränderliche und unveränderliche Typen in Python
 
 | Veränderlicher Typ    | Unveränderlicher Typ   |
 |-----------------------|------------------------|
@@ -143,235 +272,7 @@ lang: python
 
 ---
 
-## Reine Funktionen _(pure functions)_
-
-Reine Funktionen in der funktionalen Programmierung verhalten sich wie Funktionen in der Mathematik
-(bspw. f(x,y)=2x-3y+2):
-
-1. *Der Ausgabewert hängt nur von den Eingabewerten ab:*
-    1. Der Ausgabewert von f(4,1) ist stets 7.
-    2. Dies gilt unabhängig von sonstigen veränderlichen Variablen, Zuständen oder Zufallsereignissen.
-2. *Es treten keine Seiteneffekte auf:*
-    1. Der Aufruf von f(x,y) verändert nicht die Eingabewerte x und y.
-    2. Der Aufruf von f(x,y) verändert keine sonstigen Variablen (bspw. a, D oder foo).
-    3. Der Aufruf von f(x,y) löst keine Ein- oder Ausgabeoperationen aus:
-        1. keine Ein- oder Ausgaben im Nutzerinterface (bspw. Tastatur oder Monitor)
-        2. keine Lese- oder Schreiboperationen im Permanentspeicher (bspw. Festplatte)
-
----
-
-### Haskell
-
-```file
-path: code/pure_functions.hs
-lang: haskell
-```
-
-```terminal6
-./pause-and-run code/pure_functions.hs
-```
-
----
-
-### Python
-
-#### Der Ausgabewert kann von weiteren veränderlichen Variablen abhängen:
-
-```file
-path: code/pure_functions_dependence_on_additional_variables.py
-lang: python
-```
-
-```terminal3
-./pause-and-run code/pure_functions_dependence_on_additional_variables.py
-```
-
----
-
-#### Eingabewerte können durch den Aufruf einer Funktion verändert werden:
-
-```file
-path: code/pure_functions_mutation_of_input_values.py
-lang: python
-```
-
-```terminal3
-./pause-and-run code/pure_functions_mutation_of_input_values.py
-```
-
-------
-
-#### Sonstige Variablen können durch den Aufruf einer Funktion verändert werden:
-
-```file
-path: code/pure_functions_mutation_of_other_values.py
-lang: python
-```
-
-```terminal3
-./pause-and-run code/pure_functions_mutation_of_other_values.py
-```
-
----
-
-#### Funktionen können Ein- oder Ausgabeoperationen durchführen:
-
-```file
-path: code/pure_functions_output_operations.py
-lang: python
-```
-
-```terminal2
-./pause-and-run code/pure_functions_output_operations.py
-```
-
----
-
-## Funktionen als Bürger:innen erster Klasse _(functions as first-class citizens)_
-
-Die »Bürger:innen erster Klasse einer Programmiersprache« können
-
-- einer Variablen als Wert zugewiesen werden,
-- einer Funktion als Eingabewert übergeben werden und
-- von einer Funktion als Ausgabewert zurückgegeben werden.
-
-Daten (bspw. Zahlen und Zeichenwerte) sind in vielen Programmiersprachen Bürger:innen erster Klasse.
-
-In der funktionalen Programmierung sind auch Funktionen Bürger:innen erster Klasse.
-
-### Haskell
-
-#### Funktionen können als Werte zugewiesen werden:
-
-```file
-path: code/first_class_citizens_assignment.hs
-lang: haskell
-```
-
-```terminal2
-./pause-and-run code/first_class_citizens_assignment.hs
-```
-
----
-
-#### Funktionen können als Eingabewerte übergeben werden:
-
-```file
-path: code/first_class_citizens_input.hs
-lang: haskell
-```
-
-```terminal2
-./pause-and-run code/first_class_citizens_input.hs
-```
-
-#### Funktionen können als Ausgabewerte zurückgeben werden:
-
-```file
-path: code/first_class_citizens_output.hs
-lang: haskell
-```
-
-```terminal3
-./pause-and-run code/first_class_citizens_output.hs
-```
-
----
-
-### Python
-
-#### Funktionen können als Werte zugewiesen werden:
-
-```file
-path: code/first_class_citizens_assignment.py
-lang: python
-```
-
-```terminal2
-./pause-and-run code/first_class_citizens_assignment.py
-```
-
----
-
-#### Funktionen können als Eingabewerte übergeben werden:
-
-```file
-path: code/first_class_citizens_input.py
-lang: python
-```
-
-```terminal2
-./pause-and-run code/first_class_citizens_input.py
-```
-
----
-
-#### Funktionen können als Ausgabewerte zurückgeben werden:
-
-```file
-path: code/first_class_citizens_output.py
-lang: python
-```
-
-```terminal3
-./pause-and-run code/first_class_citizens_output.py
-```
-
----
-
-## Funktionen höherer Ordnung _(higher-order functions)_
-
-Funktionen höherer Ordnung
-
-* nehmen Funktionen als Eingabewerte entgegen oder
-* geben Funktionen als Ausgabewerte zurück.
-
----
-
-### Python
-
-#### Funktionen höherer Ordnung nehmen Funktionen als Eingabewerte entgegen:
-
-```file
-path: code/first_class_citizens_input.py
-lang: python
-```
-
-```terminal2
-./pause-and-run code/first_class_citizens_input.py
-```
-
----
-
-#### Funktionen höherer Ordnung geben Funktionen als Ausgabewerte zurück:
-
-```file
-path: code/first_class_citizens_output.py
-lang: python
-```
-
-```terminal2
-./pause-and-run code/first_class_citizens_output.py
-```
-
----
-
 ## Rekursion _(recursion)_
-
-### Haskell
-
-```file
-path: code/recursion.hs
-lang: haskell
-```
-
-```terminal29
-./pause-and-run code/recursion.hs
-```
-
----
-
-### Python
 
 ```file
 path: code/recursion.py
@@ -384,9 +285,104 @@ lang: python
 
 ---
 
+## Reine Funktionen _(pure functions)_
+
+### Abhängigkeit des Ausgabewerts von weiteren veränderlichen Variablen
+
+```file
+path: code/pure_functions_dependence_on_additional_variables.py
+lang: python
+```
+
+```terminal3
+./pause-and-run code/pure_functions_dependence_on_additional_variables.py
+```
+
+---
+
+### Veränderung von Eingabewerten durch den Aufruf einer Funktion
+
+```file
+path: code/pure_functions_mutation_of_input_values.py
+lang: python
+```
+
+```terminal3
+./pause-and-run code/pure_functions_mutation_of_input_values.py
+```
+
+---
+
+### Veränderung von sonstige Variablen durch den Aufruf einer Funktion
+
+```file
+path: code/pure_functions_mutation_of_other_values.py
+lang: python
+```
+
+```terminal3
+./pause-and-run code/pure_functions_mutation_of_other_values.py
+```
+
+---
+
+### Durchführung von Ein- oder Ausgabeoperationen durch Funktionen
+
+```file
+path: code/pure_functions_output_operations.py
+lang: python
+```
+
+```terminal2
+./pause-and-run code/pure_functions_output_operations.py
+```
+
+---
+
+## Funktionen als Bürger:innen erster Klasse und Funktionen höherer Ordnung _(functions as first-class citizens and higher-order functions)_
+
+### Zuweisung von Werten
+
+```file
+path: code/first_class_citizens_assignment.py
+lang: python
+```
+
+```terminal2
+./pause-and-run code/first_class_citizens_assignment.py
+```
+
+---
+
+### Übergabe einer Funktion als Eingabewert
+
+```file
+path: code/first_class_citizens_input.py
+lang: python
+```
+
+```terminal2
+./pause-and-run code/first_class_citizens_input.py
+```
+
+---
+
+### Rückgabe einer Funktion als Ausgabewert
+
+```file
+path: code/first_class_citizens_output.py
+lang: python
+```
+
+```terminal3
+./pause-and-run code/first_class_citizens_output.py
+```
+
+---
+
 ## Listenverarbeitung _(list processing)_
 
-### Haskell
+TODO: Pythonify:
 
 ```file
 path: code/list_processing.hs
@@ -397,24 +393,15 @@ lang: haskell
 ./pause-and-run code/list_processing.hs
 ```
 
+TODO: map
+
+TODO: filter
+
+TODO: reduce
+
 ---
 
 ## Bedarfsauswertung _(lazy evaluation)_
-
-### Haskell
-
-```file
-path: code/lazy_evaluation.hs
-lang: haskell
-```
-
-```terminal3
-./pause-and-run code/lazy_evaluation.hs
-```
-
----
-
-### Python
 
 ```file
 path: code/lazy_evaluation.py
@@ -444,7 +431,6 @@ lang: python
 
 1. Steven F. Lott. _Functional Python Programming, 2nd Edition_. Packt Publishing, 2018.
 2. Pierre-Yves Saumont. _Functional Programming in Java_. Manning Publications, 2017.
-3. Venkat Subramaniam. _Functional Programming in Java_. Pragmatic Bookshelf, 2014.
 
 ## World Wide Web
 
