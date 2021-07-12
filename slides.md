@@ -17,7 +17,7 @@ https://github.com/christophgietl/funktionale-konzepte
 
 # Agenda
 
-1. Funktionale Programmierung als Paradigma
+1. Funktionale Programmierung und funktionale Programmiersprachen
 2. Funktionale Konzepte in Haskell
     1. Unveränderliche Daten
     2. Rekursion
@@ -36,22 +36,23 @@ https://github.com/christophgietl/funktionale-konzepte
 
 ---
 
-# Funktionale Programmierung als Paradigma
+# Funktionale Programmierung und funktionale Programmiersprachen
 
 ## Programmierparadigmen
-- Prozedurale Programmierung
-   - Imperative Programmierung
-   - Objektorientierte Programmierung
-- Deskriptive Programmierung
-   - Funktionale Programmierung
 
-Alleinstellungsmerkmal der funktionalen Programmierung: Das Programm hat keinen Zustand.
+- prozedurale Programmierung
+   - imperative Programmierung
+   - objektorientierte Programmierung
+- deskriptive Programmierung
+   - funktionale Programmierung
+
+Alleinstellungsmerkmal der funktionalen Programmierung: *Das Programm hat keinen Zustand.*
 
 ## Programmiersprachen
 
-- Haskell: rein funktional
-- Java: Multiparadigma, hauptsächlich objektorientiert
-- Python: Multiparadigma, hauptsächlich imperativ
+- *Haskell* ist eine rein funktionale Programmiersprache.
+- *Java* ist eine Multiparadigmensprache (hauptsächlich objektorientiert mit Unterstützung für funktionalen Konzepte ab Version 8).
+- *Python* ist eine Multiparadigmensprache (hauptsächlich imperativ mit Unterstützung für objektorientierte Programmierung und funktionale Konzepte).
 
 ---
 
