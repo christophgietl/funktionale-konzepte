@@ -24,14 +24,14 @@ https://github.com/christophgietl/funktionale-konzepte
     3. Reine Funktionen
     4. Funktionen als Bürger:innen erster Klasse und Funktionen höherer Ordnung
     5. Listenverarbeitung
-    6. Bedarfsauswertung
+    6. Auswertung bei Bedarf
 3. Funktionale Konzepte in Python
     1. Unveränderliche Daten
     2. Rekursion
     3. Reine Funktionen
     4. Funktionen als Bürger:innen erster Klasse und Funktionen höherer Ordnung
     5. Listenverarbeitung
-    6. Bedarfsauswertung
+    6. Auswertung bei Bedarf
 4. Zusammenfassung
 
 ---
@@ -244,7 +244,7 @@ Weitere Fold-Funktionen in Haskell: `foldr1`, `foldl`, `foldr`
 
 ---
 
-## Bedarfsauswertung _(lazy evaluation)_
+## Auswertung bei Bedarf _(lazy evaluation)_
 
 ```file
 path: code/lazy_evaluation.hs
@@ -448,26 +448,59 @@ lang: python
 
 ## Listenverarbeitung _(list processing)_
 
-TODO: Pythonify:
+### Listenverarbeitung mithilfe von Rekursion
 
 ```file
-path: code/list_processing.hs
-lang: haskell
+path: code/list_processing_recursion.py
+lang: python
 ```
 
 ```terminal2
-./pause-and-run code/list_processing.hs
+./pause-and-run code/list_processing_recursion.py
 ```
-
-TODO: map
-
-TODO: filter
-
-TODO: reduce
 
 ---
 
-## Bedarfsauswertung _(lazy evaluation)_
+### Listenverarbeitung mithilfe von Listenfunktionen
+
+#### Map
+
+```file
+path: code/list_processing_map.py
+lang: python
+```
+
+```terminal2
+./pause-and-run code/list_processing_map.py
+```
+
+#### Filter
+
+```file
+path: code/list_processing_filter.py
+lang: python
+```
+
+```terminal2
+./pause-and-run code/list_processing_filter.py
+```
+
+#### Fold
+
+Fold heißt in Python `reduce`.
+
+```file
+path: code/list_processing_fold.py
+lang: python
+```
+
+```terminal2
+./pause-and-run code/list_processing_fold.py
+```
+
+---
+
+## Auswertung bei Bedarf _(lazy evaluation)_
 
 ```file
 path: code/lazy_evaluation.py
