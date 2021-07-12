@@ -287,32 +287,6 @@ lang: python
 
 ## Reine Funktionen _(pure functions)_
 
-### Abhängigkeit des Ausgabewerts von weiteren veränderlichen Variablen
-
-```file
-path: code/pure_functions_dependence_on_additional_variables.py
-lang: python
-```
-
-```terminal3
-./pause-and-run code/pure_functions_dependence_on_additional_variables.py
-```
-
----
-
-### Veränderung von Eingabewerten durch den Aufruf einer Funktion
-
-```file
-path: code/pure_functions_mutation_of_input_values.py
-lang: python
-```
-
-```terminal3
-./pause-and-run code/pure_functions_mutation_of_input_values.py
-```
-
----
-
 ### Veränderung von sonstige Variablen durch den Aufruf einer Funktion
 
 ```file
@@ -322,19 +296,6 @@ lang: python
 
 ```terminal3
 ./pause-and-run code/pure_functions_mutation_of_other_values.py
-```
-
----
-
-### Durchführung von Ein- oder Ausgabeoperationen durch Funktionen
-
-```file
-path: code/pure_functions_output_operations.py
-lang: python
-```
-
-```terminal2
-./pause-and-run code/pure_functions_output_operations.py
 ```
 
 ---
