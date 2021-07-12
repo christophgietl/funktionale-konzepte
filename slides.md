@@ -38,10 +38,20 @@ https://github.com/christophgietl/funktionale-konzepte
 
 # Funktionale Programmierung als Paradigma
 
-TODO:
+## Programmierparadigmen
+- Prozedurale Programmierung
+   - Imperative Programmierung
+   - Objektorientierte Programmierung
+- Deskriptive Programmierung
+   - Funktionale Programmierung
 
-- Java & Python als imperative Sprachen
-- Haskell als rein funktionale Sprache
+Alleinstellungsmerkmal der funktionalen Programmierung: Das Programm hat keinen Zustand.
+
+## Programmiersprachen
+
+- Haskell: rein funktional
+- Java: Multiparadigma, hauptsächlich objektorientiert
+- Python: Multiparadigma, hauptsächlich imperativ
 
 ---
 
@@ -447,6 +457,8 @@ lang: python
 ---
 
 ## Listenverarbeitung _(list processing)_
+
+TODO: Fertigstellen.
 
 ### Listenverarbeitung mithilfe von Rekursion
 
