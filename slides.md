@@ -19,19 +19,7 @@ https://github.com/christophgietl/funktionale-konzepte
 
 1. Funktionale Programmierung und funktionale Programmiersprachen
 2. Funktionale Konzepte in Haskell
-    1. Unveränderliche Daten
-    2. Rekursion
-    3. Reine Funktionen
-    4. Funktionen als Bürger:innen erster Klasse und Funktionen höherer Ordnung
-    5. Listenverarbeitung
-    6. Auswertung bei Bedarf
 3. Funktionale Konzepte in Python
-    1. Unveränderliche Daten
-    2. Rekursion
-    3. Reine Funktionen
-    4. Funktionen als Bürger:innen erster Klasse und Funktionen höherer Ordnung
-    5. Listenverarbeitung
-    6. Auswertung bei Bedarf
 4. Zusammenfassung
 
 ---
@@ -41,10 +29,10 @@ https://github.com/christophgietl/funktionale-konzepte
 ## Programmierparadigmen
 
 - prozedurale Programmierung
-   - imperative Programmierung
-   - objektorientierte Programmierung
+    - imperative Programmierung
+    - objektorientierte Programmierung
 - deskriptive Programmierung
-   - funktionale Programmierung
+    - funktionale Programmierung
 
 Alleinstellungsmerkmal der funktionalen Programmierung: *Das Programm hat keinen Zustand.*
 
@@ -57,6 +45,13 @@ Alleinstellungsmerkmal der funktionalen Programmierung: *Das Programm hat keinen
 ---
 
 # Funktionale Konzepte in Haskell
+
+1. Unveränderliche Daten
+2. Rekursion
+3. Reine Funktionen
+4. Funktionen als Bürger:innen erster Klasse und Funktionen höherer Ordnung
+5. Listenverarbeitung
+6. Auswertung bei Bedarf
 
 ## Unveränderliche Daten _(immutable data)_
 
@@ -215,9 +210,9 @@ lang: haskell
 `filter` ist eine Funktion höherer Ordnung:
 - `filter` nimmt ein Prädikat entgegen, d. h. eine Funktion, die ein A auf einen Boolean abbildet.
 - `filter` gibt eine Funktion mit folgenden Eigenschaften zurück:
-  - Sie bildet eine Liste von As auf eine Liste von As ab.
-  - Die Ausgabeliste enthält diejenigen Elemente der Eingabeliste,
-    die vom Prädikat auf den Wert `True` abgebildet werden.
+    - Sie bildet eine Liste von As auf eine Liste von As ab.
+    - Die Ausgabeliste enthält diejenigen Elemente der Eingabeliste,
+      die vom Prädikat auf den Wert `True` abgebildet werden.
 
 
 ```file
@@ -236,11 +231,11 @@ lang: haskell
 `foldl1` ist eine Funktion höherer Ordnung:
 - `foldl1` nimmt einen Operator entgegen, der zwei Eingabewerte vom Typ A auf einen Ausgabewert vom Typ A abbildet.
 - `foldl1` gibt eine Funktion mit folgenden Eigenschaften zurück:
-   - Sie bildet eine Liste von As auf ein A ab.
-   - Der Ausgabewert entspricht dem Ergebnis des folgenden Prozesses:
-      1. Wende den Operator auf das erste und das zweite Element der Liste an.
-      2. Wende den Operator auf das Ergebnis des vorangegangen Schritts und das dritte Element der Liste an.
-      3. usw.
+    - Sie bildet eine Liste von As auf ein A ab.
+    - Der Ausgabewert entspricht dem Ergebnis des folgenden Prozesses:
+        1. Wende den Operator auf das erste und das zweite Element der Liste an.
+        2. Wende den Operator auf das Ergebnis des vorangegangen Schritts und das dritte Element der Liste an.
+        3. usw.
 
 ```file
 path: code/list_processing_fold.hs
@@ -270,6 +265,13 @@ lang: haskell
 
 # Funktionale Konzepte in Python
 
+1. Unveränderliche Daten
+2. Rekursion
+3. Reine Funktionen
+4. Funktionen als Bürger:innen erster Klasse und Funktionen höherer Ordnung
+5. Listenverarbeitung
+6. Auswertung bei Bedarf
+
 ## Unveränderliche Daten _(immutable data)_
 
 ### Veränderlichkeit von Variablen
@@ -283,6 +285,8 @@ lang: python
 ./pause-and-run code/immutable_data_variables.py
 ```
 
+---
+
 ### Konvention: Variablennamen in Großbuchstaben bezeichnen Konstanten (d. h. unveränderliche Variablen).
 
 ```file
@@ -293,8 +297,6 @@ lang: python
 ```terminal2
 ./pause-and-run code/immutable_data_constants.py
 ```
-
----
 
 ### Unveränderlichkeit von Tupeln
 
@@ -528,10 +530,8 @@ lang: python
 
 # Zusammenfassung
 
-1. Funktionale Programmierung unterscheidet sich durch das Fehlen von Zustand grundlegend von imperativer
-   Programmierung.
-2. Haskell und andere rein funktionale Programmiersprachen *zwingen* den:die Programmierer:in zur Nutzung funktionaler
-   Konzepte.
+1. Funktionale Programmierung unterscheidet sich durch das Fehlen von Zustand grundlegend von imperativer Programmierung.
+2. Haskell und andere rein funktionale Programmiersprachen *zwingen* den:die Programmierer:in zur Nutzung funktionaler Konzepte.
 3. Python und andere Multiparadigmensprachen *erlauben* die Nutzung funktionaler Konzepte.
 4. Funktionale Konzepte
     1. machen Software modular und kombinierbar und
@@ -546,8 +546,8 @@ lang: python
 
 ## World Wide Web
 
-1. Paul Hudak, John Peterson, Joseph Fasel. »A gentle introdcution to Haskell. Version
-   98.« https://www.haskell.org/tutorial/index.html
+1. Paul Hudak, John Peterson, Joseph Fasel. »A gentle introdcution to Haskell. Version 98.«
+   https://www.haskell.org/tutorial/index.html
 2. A. M. Kuchling. »Functional Programming HOWTO. Release 0.32.« https://docs.python.org/3/howto/functional.html
-3. Rainer Grimm. Kategorie »funktional« im Blog »Modernes
-   C++«. https://www.grimm-jaud.de/index.php/blog/category/funktional
+3. Rainer Grimm. Kategorie »funktional« im Blog »Modernes C++«.
+   https://www.grimm-jaud.de/index.php/blog/category/funktional
