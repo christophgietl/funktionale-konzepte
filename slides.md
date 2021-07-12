@@ -232,17 +232,6 @@ lang: python
 
 ---
 
-### Konvention: Variablennamen in Großbuchstaben bezeichnen Konstanten (d. h. unveränderliche Variablen).
-
-```file
-path: code/immutable_data_constants.py
-lang: python
-```
-
-```terminal2
-./pause-and-run code/immutable_data_constants.py
-```
-
 ### Unveränderlichkeit von Tupeln
 
 ```file
@@ -256,18 +245,7 @@ lang: python
 
 ---
 
-### Einschränkung: Wir können den Wert der Variablen `a` durch einen neuen Tupel ersetzen.
-
-```file
-path: code/immutable_data_replace_tuple.py
-lang: python
-```
-
-```terminal3
-./pause-and-run code/immutable_data_replace_tuple.py
-```
-
-### Besser: Verwende den veränderlichen Typ `list`.
+### Veränderlichkeit von Listen
 
 ```file
 path: code/immutable_data_use_mutable_type.py
@@ -277,8 +255,6 @@ lang: python
 ```terminal3
 ./pause-and-run code/immutable_data_use_mutable_type.py
 ```
-
----
 
 ### Einige veränderliche und unveränderliche Typen in Python
 
