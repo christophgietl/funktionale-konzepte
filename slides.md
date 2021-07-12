@@ -170,25 +170,11 @@ lang: haskell
 ## Listenverarbeitung _(list processing)_
 
 Haskell und andere rein funktionale Sprachen erlauben *keine Schleifen*.
+Deshalb benötigen wir andere Konzepte zur Listenverarbeitung:
+- Rekursion
+- Listenfunktionen
 
-Deshalb benötigen wir andere Konzepte zur Listenverarbeitung.
-
-### Listenverarbeitung mithilfe von Rekursion
-
-```file
-path: code/list_processing_recursion.hs
-lang: haskell
-```
-
-```terminal2
-./pause-and-run code/list_processing_recursion.hs
-```
-
----
-
-### Listenverarbeitung mithilfe von Listenfunktionen
-
-#### Map
+### Listenfunktion `map`
 
 `map` ist eine Funktion höherer Ordnung:
 - `map` nimmt eine Funktion entgegen, die ein A auf ein B abbildet.
@@ -203,50 +189,9 @@ lang: haskell
 ./pause-and-run code/list_processing_map.hs
 ```
 
----
+### Weitere Listenfunktionen in Haskell
 
-#### Filter
-
-`filter` ist eine Funktion höherer Ordnung:
-- `filter` nimmt ein Prädikat entgegen, d. h. eine Funktion, die ein A auf einen Boolean abbildet.
-- `filter` gibt eine Funktion mit folgenden Eigenschaften zurück:
-    - Sie bildet eine Liste von As auf eine Liste von As ab.
-    - Die Ausgabeliste enthält diejenigen Elemente der Eingabeliste,
-      die vom Prädikat auf den Wert `True` abgebildet werden.
-
-
-```file
-path: code/list_processing_filter.hs
-lang: haskell
-```
-
-```terminal2
-./pause-and-run code/list_processing_filter.hs
-```
-
----
-
-#### Fold
-
-`foldl1` ist eine Funktion höherer Ordnung:
-- `foldl1` nimmt einen Operator entgegen, der zwei Eingabewerte vom Typ A auf einen Ausgabewert vom Typ A abbildet.
-- `foldl1` gibt eine Funktion mit folgenden Eigenschaften zurück:
-    - Sie bildet eine Liste von As auf ein A ab.
-    - Der Ausgabewert entspricht dem Ergebnis des folgenden Prozesses:
-        1. Wende den Operator auf das erste und das zweite Element der Liste an.
-        2. Wende den Operator auf das Ergebnis des vorangegangen Schritts und das dritte Element der Liste an.
-        3. usw.
-
-```file
-path: code/list_processing_fold.hs
-lang: haskell
-```
-
-```terminal2
-./pause-and-run code/list_processing_fold.hs
-```
-
-Weitere Fold-Funktionen in Haskell: `foldr1`, `foldl`, `foldr`
+`filter`, `foldl`, `foldr`, `foldl1`, `foldr1`
 
 ---
 
@@ -461,24 +406,7 @@ lang: python
 
 ## Listenverarbeitung _(list processing)_
 
-TODO: Fertigstellen.
-
-### Listenverarbeitung mithilfe von Rekursion
-
-```file
-path: code/list_processing_recursion.py
-lang: python
-```
-
-```terminal2
-./pause-and-run code/list_processing_recursion.py
-```
-
----
-
-### Listenverarbeitung mithilfe von Listenfunktionen
-
-#### Map
+### Listenfunktion `map`
 
 ```file
 path: code/list_processing_map.py
@@ -489,29 +417,9 @@ lang: python
 ./pause-and-run code/list_processing_map.py
 ```
 
-#### Filter
+### Weitere Listenfunktionen in Python
 
-```file
-path: code/list_processing_filter.py
-lang: python
-```
-
-```terminal2
-./pause-and-run code/list_processing_filter.py
-```
-
-#### Fold
-
-Fold heißt in Python `reduce`.
-
-```file
-path: code/list_processing_fold.py
-lang: python
-```
-
-```terminal2
-./pause-and-run code/list_processing_fold.py
-```
+`filter`, `functools.reduce`
 
 ---
 
