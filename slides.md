@@ -224,6 +224,27 @@ lang: haskell
 
 ---
 
+## Funktionale Konzepte in Haskell im Überblick
+
+Funktionales Konzept       | Unterstützung | Bemerkungen
+---------------------------|---------------|-------------------------------------------
+Unveränderliche Daten      | ja            | sorgen für hohe Nachvollziehbarkeit und
+                           |               | erleichtern Debugging und Korrektheitsbeweis
+                           |               |
+Rekursion                  | ja            | wird vom Compiler optimiert
+                           |               |
+Reine Funktionen           | ja            | sorgen für hohe Nachvollziehbarkeit und
+                           |               | erleichtern Debugging und Korrektheitsbeweis
+                           |               |
+Funktionen höherer Ordnung | ja            | sorgen für Modularisierung und Kombinierbarkeit
+                           |               |
+Listenverarbeitung         | ja            | sorgen für leicht verständlichen Code
+                           |               |
+Auswertung bei Bedarf      | ja            | macht Optimierung von Datenstrukturen
+                           |               | überflüssig und sorgt so für lesbaren Code
+
+---
+
 # Funktionale Konzepte in Python
 
 1. Unveränderliche Daten
@@ -386,6 +407,31 @@ lang: python
 ```terminal3
 ./pause-and-run code/lazy_evaluation.py
 ```
+
+---
+
+## Funktionale Konzepte in Python im Überblick
+
+Funktionales Konzept       | Unterstützung | Bemerkungen
+---------------------------|---------------|-------------------------------------------
+Unveränderliche Daten      | optional      | Programmierer:innen können verzichten
+                           |               | auf Neuzuweisung von Variablen und
+                           |               | auf veränderliche Datentypen.
+                           |               |
+Rekursion                  | gering        | Nutzung von Schleifen bietet sich an
+                           |               | wegen Rekursionslimit und
+                           |               | wegen mangelnder Optimierung.
+                           |               |
+Reine Funktionen           | optional      | Programmierer:innen können verzichten
+                           |               | auf externe Abhängigkeiten und
+                           |               | auf Seiteneffekte.
+                           |               |
+Funktionen höherer Ordnung | ja            | ermöglichen unter anderem Dekoratoren
+                           |               |
+Listenverarbeitung         | ja            | ermöglichen leicht verständlichen Code
+                           |               |
+Auswertung bei Bedarf      | ja            | macht Optimierung von Datenstrukturen
+                           |               | überflüssig und sorgt so für lesbaren Code
 
 ---
 
