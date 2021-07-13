@@ -11,16 +11,32 @@
 
 ---
 
-# Folien und Code
+# Modul
 
-https://github.com/christophgietl/funktionale-konzepte
+## Titel
 
-# Agenda
+Programmieren 3
+
+## Dozent
+
+Christoph Gietl
+
+# Heutige Sitzung
+
+## Thema
+
+Funktionale Konzepte und deren Umsetzung in aktuellen Programmiersprachen
+
+## Agenda
 
 1. Funktionale Programmierung und funktionale Programmiersprachen
 2. Funktionale Konzepte in Haskell
 3. Funktionale Konzepte in Python
 4. Zusammenfassung
+
+## Folien und Code
+
+https://github.com/christophgietl/funktionale-konzepte
 
 ---
 
@@ -396,3 +412,7 @@ lang: python
 2. A. M. Kuchling. »Functional Programming HOWTO. Release 0.32.« https://docs.python.org/3/howto/functional.html
 3. Rainer Grimm. Kategorie »funktional« im Blog »Modernes C++«.
    https://www.grimm-jaud.de/index.php/blog/category/funktional
+
+# Nächste Sitzung
+
+Typisierung in aktuellen Programmiersprachen
